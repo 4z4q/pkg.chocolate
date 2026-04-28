@@ -8,7 +8,7 @@ import { FloatingSweets } from "@/components/floating-sweets";
 import { useState } from "react";
 import { ProductGrid } from "@/components/product-grid";
 import { StickyBar } from "@/components/sticky-bar";
-import { PkgPackages } from "@/components/test";
+import { PkgPackages } from "@/components/pakage";
 
 export default function Page() {
   const [selectedIds, setSelectedIds] = useState<number[]>([]);
