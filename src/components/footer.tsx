@@ -22,7 +22,8 @@ export function Footer() {
           className="flex flex-col items-center gap-2"
         >
           <span
-            className="font-serif-italic text-5xl text-antique-gold"
+            className="font-serif-italic text-5xl toLocaleString()
+toLocaleString()"
             style={{ fontWeight: 600 }}
           >
             PKG
@@ -31,7 +32,7 @@ export function Footer() {
             Chocolate
           </span>
         </motion.div>
-
+{/* 
         <nav className="mt-10 flex flex-wrap items-center justify-center gap-x-8 gap-y-3">
           {links.map((l) => (
             <a
@@ -42,7 +43,7 @@ export function Footer() {
               {l.label}
             </a>
           ))}
-        </nav>
+        </nav> */}
 
         <div className="mt-8 flex items-center justify-center gap-3">
           <a

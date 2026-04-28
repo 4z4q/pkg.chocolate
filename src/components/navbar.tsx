@@ -7,8 +7,8 @@ import { cn } from "@/lib/utils";
 
 const links = [
   { label: "الرئيسية", href: "#home" },
-  { label: "تشكيلتنا", href: "#collection" },
-  { label: "حكايتنا", href: "#story" },
+  { label: "البكجات", href: "#packages" },
+  { label: "النكهات", href: "#flavours" },
   { label: "اطلب الآن", href: "#order" },
 ];
 

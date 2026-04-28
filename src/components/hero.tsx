@@ -40,7 +40,7 @@ export function Hero() {
                   delay: 0.5 + i * 0.25,
                   ease: [0.22, 1, 0.36, 1],
                 }}
-                className="inline-block"
+                className={word === "PKG" ? "text-antique-gold" : "text-espresso"}
                 style={{ fontWeight: 400 }}
               >
                 {word}

@@ -2,16 +2,13 @@
 import { Navbar } from "@/components/navbar";
 import { Hero } from "@/components/hero";
 import { Categories } from "@/components/categories";
-import { FeaturedProducts } from "@/components/featured-products";
-import { BrandStory } from "@/components/brand-story";
-import { TikTokSocial } from "@/components/tiktok-social";
-import { Testimonials } from "@/components/testimonials";
 import { OrderCTA } from "@/components/order-cta";
 import { Footer } from "@/components/footer";
 import { FloatingSweets } from "@/components/floating-sweets";
 import { useState } from "react";
 import { ProductGrid } from "@/components/product-grid";
 import { StickyBar } from "@/components/sticky-bar";
+import { PkgPackages } from "@/components/test";
 
 export default function Page() {
   const [selectedIds, setSelectedIds] = useState<number[]>([]);
@@ -27,13 +24,14 @@ export default function Page() {
       <Navbar />
       <Hero />
       <Categories />
+      <PkgPackages />
       <ProductGrid selectedIds={selectedIds} onToggle={toggleSelection} />
       <StickyBar selectedIds={selectedIds} />
 
-      <FeaturedProducts />
-      <BrandStory />
-      <TikTokSocial />
-      <Testimonials />
+      {/* <FeaturedProducts /> */}
+      {/* <BrandStory /> */}
+      {/* <TikTokSocial /> */}
+      {/* <Testimonials /> */}
       <OrderCTA />
       <Footer />
     </main>

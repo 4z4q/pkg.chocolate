@@ -43,7 +43,7 @@ export function ProductCard({ product, selected, onToggle }: ProductCardProps) {
         <span
           aria-hidden="true"
           className={[
-            "absolute top-2 right-2 w-7 h-7 rounded-full bg-gold flex items-center justify-center",
+            "absolute top-2 right-2 w-7 h-7 rounded-full bg-green-400 flex items-center justify-center",
             "shadow-[0_2px_6px_rgba(196,149,106,0.5)]",
             "transition-all duration-[250ms] ease-out",
             selected ? "opacity-100 scale-100  " : "opacity-0 scale-75",

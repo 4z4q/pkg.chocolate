@@ -1,45 +1,45 @@
-"use client"
+"use client";
 
-import Image from "next/image"
-import { motion } from "motion/react"
-import { Star } from "lucide-react"
-import { SectionDivider } from "./section-divider"
+import Image from "next/image";
+import { motion } from "motion/react";
+import { Star } from "lucide-react";
+import { SectionDivider } from "./section-divider";
 
 // WhatsApp business number — owner can update via env or directly here
-const WHATSAPP_NUMBER = "+966579707079"
+const WHATSAPP_NUMBER = "+966579707079";
 
-function buildWhatsAppLink(p: { name: string; price: string }) {
+function buildWhatsAppLink(p: { name: string; price: number }) {
   const message = `مرحباً PKG Chocolate،
 أرغب في طلب المنتج التالي:
 
 • ${p.name}
 • السعر: ${p.price}
 
-شكراً لكم.`
-  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`
+شكراً لكم.`;
+  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
 }
 
 type Product = {
-  name: string
-  description: string
-  price: string
-  rating: number
-  image: string
-  tag?: string
-}
+  name: string;
+  description: string;
+  price: number;
+  rating: number;
+  image: string;
+  tag?: string;
+};
 
 const products: Product[] = [
   {
     name: "Milk Chocolate Truffles",
     description: "Velvety ganache enrobed in silky milk chocolate.",
-    price: "$28",
+    price: 28,
     rating: 4.9,
     image: "/products/truffles.jpg",
   },
   {
     name: "Kunafa Chocolate Bar",
     description: "Crisp kunafa layered with pistachio & dark chocolate.",
-    price: "$22",
+    price: 22,
     rating: 5.0,
     image: "/products/kunafa-bar.jpg",
     tag: "Bestseller",
@@ -47,14 +47,14 @@ const products: Product[] = [
   {
     name: "Cardamom Pralines",
     description: "Aromatic cardamom kissed with toasted almond praline.",
-    price: "$34",
+    price: 34,
     rating: 4.8,
     image: "/products/cardamom-pralines.jpg",
   },
   {
     name: "Assorted Gift Box",
     description: "A curated selection of our finest creations.",
-    price: "$62",
+    price: 62,
     rating: 4.9,
     image: "/products/gift-box.jpg",
     tag: "Gift",
@@ -62,19 +62,19 @@ const products: Product[] = [
   {
     name: "Rose & Pistachio Bark",
     description: "Delicate rose petals, crushed pistachio, cream chocolate.",
-    price: "$24",
+    price: 24,
     rating: 4.9,
     image: "/products/rose-pistachio.jpg",
   },
   {
     name: "Seasonal Special",
     description: "Date & saffron pralines — a limited seasonal edition.",
-    price: "$38",
+    price: 38,
     rating: 5.0,
     image: "/products/seasonal.jpg",
     tag: "Limited",
   },
-]
+];
 
 function ProductCard({ p, i }: { p: Product; i: number }) {
   return (
@@ -112,7 +112,11 @@ function ProductCard({ p, i }: { p: Product; i: number }) {
               className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full bg-espresso text-warm-white text-xs tracking-[0.2em] uppercase font-medium hover:bg-rose-gold transition-colors duration-500"
               aria-label={`Order ${p.name} via WhatsApp`}
             >
-              <span className="font-arabic text-sm tracking-normal" dir="rtl" lang="ar">
+              <span
+                className="font-arabic text-sm tracking-normal"
+                dir="rtl"
+                lang="ar"
+              >
                 اطلب الآن
               </span>
               <span aria-hidden="true">🛒</span>
@@ -134,8 +138,14 @@ function ProductCard({ p, i }: { p: Product; i: number }) {
             {p.description}
           </p>
           <div className="mt-5 flex items-center justify-between">
-            <span className="font-serif text-xl text-rose-gold" style={{ fontWeight: 500 }}>
-              {p.price}
+            <span
+              className="font-serif text-xl text-rose-gold"
+              style={{ fontWeight: 500 }}
+            >
+              {Intl.NumberFormat("ar-SA", {
+                style: "currency",
+                currency: "SAR",
+              }).format(p.price)}
             </span>
             <span className="text-[10px] tracking-[0.25em] uppercase text-espresso/50">
               Handcrafted
@@ -144,7 +154,7 @@ function ProductCard({ p, i }: { p: Product; i: number }) {
         </div>
       </div>
     </motion.article>
-  )
+  );
 }
 
 export function FeaturedProducts() {
@@ -179,5 +189,5 @@ export function FeaturedProducts() {
         </div>
       </div>
     </section>
-  )
+  );
 }

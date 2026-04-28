@@ -55,8 +55,8 @@ export function OrderCTA() {
             rel="noopener noreferrer"
             className="shimmer-sweep group inline-flex items-center gap-3 px-8 py-4 rounded-full bg-espresso text-warm-white text-sm tracking-[0.2em] uppercase font-medium hover:bg-rose-gold transition-colors duration-500 shadow-[0_14px_40px_-14px_rgba(44,24,16,0.45)]"
           >
+           أطلب عبر الواتساب
             <MessageCircle className="w-4 h-4" />
-            Order via WhatsApp
           </a>
 
           <div className="flex items-center gap-3">
@@ -84,7 +84,7 @@ export function OrderCTA() {
           transition={{ duration: 1, delay: 0.6 }}
           className="mt-10 text-xs tracking-[0.3em] uppercase text-espresso/50"
         >
-          Same-day delivery · Gift wrapping included
+          توصيل داخل جده مجانا - صواني بأشكال متميزه ومختلفه  
         </motion.p>
       </div>
     </section>
