@@ -25,7 +25,6 @@ const Thamny = localFont({
   variable: "--font-cairo",
 });
 
-
 export const metadata: Metadata = {
   title: "PKG Chocolate | شوكولاتة بلجيكية وحلويات فاخرة في جدة",
   description:
@@ -58,7 +57,9 @@ export const metadata: Metadata = {
 //   width: "device-width",
 //   initialScale: 1,
 // }
+import {  ImageKitProvider } from "@imagekit/next";
 
+const imagekitUrlEndpoint = process.env.NEXT_PUBLIC_IMAGEKIT_URL_ENDPOINT;
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -67,7 +68,10 @@ export default function RootLayout({
   return (
     <html lang="ar" className={`${Thamny.className} bg-warm-white `} dir="rtl">
       <body className="font-sans antialiased bg-warm-white text-espresso">
-        {children}
+        <ImageKitProvider urlEndpoint={imagekitUrlEndpoint}>
+          {children}
+        </ImageKitProvider>
+
         {/* {process.env.NODE_ENV === "production" && <Analytics />} */}
       </body>
     </html>

@@ -37,3 +37,9 @@ export default function Page() {
     </main>
   );
 }
+//import Image from 'next/image'
+// import ImageKit from "@/components/image-kit";
+
+// export default function Page() {
+//   return <ImageKit src="/default-image.jpg" alt="Picture of the author" />;
+// }

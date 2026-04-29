@@ -276,7 +276,7 @@ export function PkgPackages() {
           <p className="text-xs tracking-[0.4em] uppercase text-rose-gold mb-3">
             PKG Chocolate
           </p>
-          <h2 className="font-serif italic text-5xl md:text-6xl text-antique-gold text-balance">
+          <h2 className="font-serif  text-5xl md:text-6xl text-antique-gold text-balance">
             بكجاتنا المميزة
           </h2>
           <p className="mt-4 text-base text-gold- font-light max-w-xl mx-auto">

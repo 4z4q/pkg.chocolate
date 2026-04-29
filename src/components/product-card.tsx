@@ -1,18 +1,16 @@
-import Image from "next/image"
-import { Check } from "lucide-react"
-import type { Product } from "@/lib/products"
+import Image from "next/image";
+import { Check } from "lucide-react";
+import type { Product } from "@/lib/products";
+import ImageKit from "./image-kit";
 
 type ProductCardProps = {
-  product: Product
-  selected: boolean
-  onToggle: (id: number) => void
-}
+  product: Product;
+  selected: boolean;
+  onToggle: (id: number) => void;
+  priority?: boolean;
+};
 
-/**
- * Pure CSS animations only (no Framer Motion) — performant for 50+ cards.
- * Click anywhere on the card to toggle selection.
- */
-export function ProductCard({ product, selected, onToggle }: ProductCardProps) {
+export function ProductCard({ product, selected, onToggle, priority }: ProductCardProps) {
   return (
     <button
       type="button"
@@ -31,13 +29,7 @@ export function ProductCard({ product, selected, onToggle }: ProductCardProps) {
     >
       {/* Square image */}
       <div className="relative aspect-square w-full overflow-hidden bg-cream">
-        <Image
-          src={product.image || "/placeholder.svg"}
-          alt={product.name}
-          fill
-          sizes="(min-width: 1024px) 25vw, (min-width: 640px) 33vw, 50vw"
-          className="object-cover"
-        />
+        <ImageKit src={product.image} alt={product.name} priority={priority} />
 
         {/* Gold checkmark badge — fade in/out */}
         <span
@@ -58,5 +50,5 @@ export function ProductCard({ product, selected, onToggle }: ProductCardProps) {
         {product.name}
       </p>
     </button>
-  )
+  );
 }

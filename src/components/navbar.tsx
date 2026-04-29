@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils";
 const links = [
   { label: "الرئيسية", href: "#home" },
   { label: "البكجات", href: "#packages" },
-  { label: "النكهات", href: "#flavours" },
+  { label: "الحشوات", href: "#flavours" },
   { label: "اطلب الآن", href: "#order" },
 ];
 
@@ -37,7 +37,12 @@ export function Navbar() {
         )}
       >
         <nav className="mx-auto max-w-7xl flex items-center justify-between px-6 lg:px-10 h-20">
-          <a href="#home" className="flex items-baseline gap-2 group" aria-label="PKG Chocolate - الصفحة الرئيسية" dir="ltr">
+          <a
+            href="#home"
+            className="flex items-baseline gap-2 group"
+            aria-label="PKG Chocolate - الصفحة الرئيسية"
+            dir="ltr"
+          >
             <span
               className="font-serif-italic text-2xl lg:text-3xl tracking-wide text-antique-gold"
               style={{ fontWeight: 600 }}
