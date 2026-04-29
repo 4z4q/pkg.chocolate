@@ -1,23 +1,23 @@
-"use client";
 import { Navbar } from "@/components/navbar";
 import { Hero } from "@/components/hero";
 import { Categories } from "@/components/categories";
 import { OrderCTA } from "@/components/order-cta";
 import { Footer } from "@/components/footer";
 import { FloatingSweets } from "@/components/floating-sweets";
-import { useState } from "react";
-import { ProductGrid } from "@/components/product-grid";
-import { StickyBar } from "@/components/sticky-bar";
 import { PkgPackages } from "@/components/pakage";
+import { SelectionSection } from "@/components/selection-section";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "PKG Chocolate | شوكولاتة بلجيكية فاخرة وهدايا في جدة",
+  description:
+    "أفضل شوكولاتة بلجيكية في جدة – حي السنابل. " +
+    "توت مغطى بالشوكولاتة، بكجات هدايا للمناسبات، " +
+    "موالح راقية وحلويات عربية فاخرة. اطلب الآن.",
+  alternates: { canonical: "https://pkg-chocolate.vercel.app/" },
+};
 
 export default function Page() {
-  const [selectedIds, setSelectedIds] = useState<number[]>([]);
-
-  function toggleSelection(id: number) {
-    setSelectedIds((prev) =>
-      prev.includes(id) ? prev.filter((x) => x !== id) : [...prev, id]
-    );
-  }
   return (
     <main className="relative bg-warm-white text-espresso overflow-x-hidden">
       <FloatingSweets />
@@ -25,21 +25,11 @@ export default function Page() {
       <Hero />
       <Categories />
       <PkgPackages />
-      <ProductGrid selectedIds={selectedIds} onToggle={toggleSelection} />
-      <StickyBar selectedIds={selectedIds} />
 
-      {/* <FeaturedProducts /> */}
-      {/* <BrandStory /> */}
-      {/* <TikTokSocial /> */}
-      {/* <Testimonials /> */}
+      <SelectionSection />
+
       <OrderCTA />
       <Footer />
     </main>
   );
 }
-//import Image from 'next/image'
-// import ImageKit from "@/components/image-kit";
-
-// export default function Page() {
-//   return <ImageKit src="/default-image.jpg" alt="Picture of the author" />;
-// }

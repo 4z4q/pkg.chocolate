@@ -30,6 +30,20 @@ export const metadata: Metadata = {
   description:
     "اكتشف عالم PKG Chocolate في جدة - حي السنابل. شوكولاتة بلجيكية فاخرة، حلويات عربية، موالح راقية، وتوت مغطى بالشوكولاتة. تجربة مميزة تُصنع بشغف وتُقدّم بأناقة.",
   keywords: [
+    "بكج شوكلتة",
+    "صواني شوكولاتة",
+    "هدايا شوكولاتة",
+    "شوكولاتة فاخرة",
+    "حلويات عربية",
+    "موالح راقية",
+    "توت مغطى بالشوكولاتة",
+    "حي السنابل",
+    "شوكولاتة جدة",
+    "توت بالشوكولاتة",
+    "بكجات هدايا",
+    "حلويات فاخرة",
+    "PKG Chocolate",
+    "شوكولاتة جدة",
     "شوكولاتة بلجيكية",
     "حلويات جدة",
     "حي السنابل",
@@ -45,19 +59,11 @@ export const metadata: Metadata = {
     type: "website",
     locale: "ar_SA",
   },
-  twitter: {
-    card: "summary_large_image",
-    title: "PKG Chocolate",
-    description: "شوكولاتة بلجيكية فاخرة وحلويات راقية في جدة.",
-  },
+  alternates: { canonical: "https://pkg-chocolate.vercel.app/" },
+  
 };
 
-// export const viewport = {
-//   themeColor: "#FDFAF6",
-//   width: "device-width",
-//   initialScale: 1,
-// }
-import {  ImageKitProvider } from "@imagekit/next";
+import { ImageKitProvider } from "@imagekit/next";
 
 const imagekitUrlEndpoint = process.env.NEXT_PUBLIC_IMAGEKIT_URL_ENDPOINT;
 export default function RootLayout({

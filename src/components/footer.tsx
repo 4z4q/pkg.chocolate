@@ -1,14 +1,14 @@
-"use client"
+"use client";
 
-import { motion } from "motion/react"
-import { Instagram, Music2, MessageCircle } from "lucide-react"
+import { motion } from "motion/react";
+import { Instagram, Music2, MessageCircle } from "lucide-react";
 
 const links = [
   { label: "Home", href: "#home" },
   { label: "Collection", href: "#collection" },
   { label: "Our Story", href: "#story" },
   { label: "Order", href: "#order" },
-]
+];
 
 export function Footer() {
   return (
@@ -32,7 +32,7 @@ toLocaleString()"
             Chocolate
           </span>
         </motion.div>
-{/* 
+        {/* 
         <nav className="mt-10 flex flex-wrap items-center justify-center gap-x-8 gap-y-3">
           {links.map((l) => (
             <a
@@ -85,5 +85,5 @@ toLocaleString()"
         </p>
       </div>
     </footer>
-  )
+  );
 }

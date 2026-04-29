@@ -1,10 +1,9 @@
+
 "use client";
 
 import { motion } from "motion/react";
-import { ChevronDown } from "lucide-react";
 
-const title = ["PKG", "Chocolate"];
-
+// ✅ حذف title array — الحل أبسط وأفضل لـ SEO
 export function Hero() {
   return (
     <section
@@ -13,12 +12,11 @@ export function Hero() {
     >
       {/* Soft gradient backdrop */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_#FDFAF6_0%,_#F5EFE6_55%,_#F2D5C4_120%)]" />
-
-      {/* Soft vignette */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_transparent_40%,_rgba(253,250,246,0.6)_100%)] pointer-events-none" />
 
-      {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto pt-24">
+
+        {/* Eyebrow — لا تغيير */}
         <motion.p
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
@@ -28,27 +26,50 @@ export function Hero() {
           — حلويات عربية فاخرة —
         </motion.p>
 
-        <h1 className="font-serif italic text-espresso text-balance">
+        {/*
+          ✅ FIX: H1 يحتوي على النص الكامل كـ aria-label
+          التصميم البصري لم يتغير — نفس الـ animation
+          لكن جوجل تقرأ aria-label = "PKG Chocolate" صحيحاً
+        */}
+        <h1
+          className="font-serif italic text-espresso text-balance"
+          aria-label="PKG Chocolate"
+        >
           <span className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-6xl md:text-8xl lg:text-9xl leading-[0.95] tracking-tight">
-            {title.map((word, i) => (
-              <motion.span
-                key={word}
-                initial={{ opacity: 0, y: 30, filter: "blur(8px)" }}
-                animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-                transition={{
-                  duration: 1.1,
-                  delay: 0.5 + i * 0.25,
-                  ease: [0.22, 1, 0.36, 1],
-                }}
-                className={word === "PKG" ? "text-antique-gold" : "text-espresso"}
-                style={{ fontWeight: 400 }}
-              >
-                {word}
-              </motion.span>
-            ))}
+            <motion.span
+              aria-hidden="true"
+              initial={{ opacity: 0, y: 30, filter: "blur(8px)" }}
+              animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+              transition={{ duration: 1.1, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
+              className="text-antique-gold"
+              style={{ fontWeight: 400 }}
+            >
+              PKG
+            </motion.span>
+            <motion.span
+              aria-hidden="true"
+              initial={{ opacity: 0, y: 30, filter: "blur(8px)" }}
+              animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+              transition={{ duration: 1.1, delay: 0.75, ease: [0.22, 1, 0.36, 1] }}
+              className="text-espresso"
+              style={{ fontWeight: 400 }}
+            >
+              Chocolate
+            </motion.span>
           </span>
         </h1>
 
+
+        <h2 className="sr-only">
+          شوكولاتة بلجيكية فاخرة في جدة – حي السنابل
+        </h2>
+
+        <p className="sr-only">
+          PKG Chocolate جدة — توت مغطى بالشوكولاتة، بكجات هدايا فاخرة،
+          موالح راقية، شوكولاتة هدايا مناسبات، حي السنابل جدة
+        </p>
+
+        {/* Tagline — لا تغيير */}
         <motion.p
           initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
@@ -69,6 +90,7 @@ export function Hero() {
           حيث تتحول التفاصيل إلى لذة تُحكى
         </motion.p>
 
+        {/* CTA buttons — لا تغيير */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -81,7 +103,6 @@ export function Hero() {
           >
             اكتشف تشكيلتنا
           </a>
-
           <a
             href="#story"
             className="group relative text-sm tracking-[0.2em] uppercase text-espresso/80 hover:text-espresso transition-colors py-1"
@@ -91,20 +112,6 @@ export function Hero() {
           </a>
         </motion.div>
       </div>
-
-      {/* Scroll indicator */}
-      {/* <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1, y: [0, 8, 0] }}
-        transition={{
-          opacity: { duration: 1, delay: 2.2 },
-          y: { duration: 2.4, repeat: Infinity, ease: "easeInOut", delay: 2.2 },
-        }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 text-espresso/50"
-      >
-        <span className="text-[10px] tracking-[0.3em] uppercase">استكشف</span>
-        <ChevronDown className="w-4 h-4" />
-      </motion.div> */}
     </section>
   );
 }
