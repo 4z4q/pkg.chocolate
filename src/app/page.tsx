@@ -9,7 +9,7 @@ import { SelectionSection } from "@/components/selection-section";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "PKG Chocolate | شوكولاتة بلجيكية فاخرة وهدايا في جدة",
+  title: "PKG Chocolate | بكج شوكلت",
   description:
     "أفضل شوكولاتة بلجيكية في جدة – حي السنابل. " +
     "توت مغطى بالشوكولاتة، بكجات هدايا للمناسبات، " +

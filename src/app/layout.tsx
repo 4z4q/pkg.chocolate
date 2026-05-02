@@ -30,7 +30,8 @@ export const metadata: Metadata = {
   description:
     "اكتشف عالم PKG Chocolate في جدة - حي السنابل. شوكولاتة بلجيكية فاخرة، حلويات عربية، موالح راقية، وتوت مغطى بالشوكولاتة. تجربة مميزة تُصنع بشغف وتُقدّم بأناقة.",
   keywords: [
-    "بكج شوكلتة",
+    "بكج شوكلت",
+    "PKG Chocolate",
     "صواني شوكولاتة",
     "هدايا شوكولاتة",
     "شوكولاتة فاخرة",
@@ -50,7 +51,6 @@ export const metadata: Metadata = {
     "توت بالشوكولاتة",
     "بكجات هدايا",
     "حلويات فاخرة",
-    "PKG Chocolate",
   ],
   openGraph: {
     title: "PKG Chocolate | تجربة فاخرة من الشوكولاتة",
@@ -60,7 +60,6 @@ export const metadata: Metadata = {
     locale: "ar_SA",
   },
   alternates: { canonical: "https://pkg-chocolate.vercel.app/" },
-  
 };
 
 import { ImageKitProvider } from "@imagekit/next";
