@@ -22,8 +22,7 @@ export function Footer() {
           className="flex flex-col items-center gap-2"
         >
           <span
-            className="font-serif-italic text-5xl toLocaleString()
-toLocaleString()"
+            className="font-serif-italic text-5xl"
             style={{ fontWeight: 600 }}
           >
             PKG
