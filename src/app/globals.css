@@ -90,6 +90,27 @@
   --color-sage: var(--sage);
   --color-antique-gold: var(--antique-gold);
 
+  /* Extended aqua + cream scales as Tailwind tokens */
+  --color-aqua-100: var(--aqua-100);
+  --color-aqua-200: var(--aqua-200);
+  --color-aqua-300: var(--aqua-300);
+  --color-aqua-400: var(--aqua-400);
+  --color-aqua-500: var(--aqua-500);
+  --color-aqua-600: var(--aqua-600);
+  --color-aqua-700: var(--aqua-700);
+  --color-aqua-800: var(--aqua-800);
+  --color-aqua-900: var(--aqua-900);
+  --color-cream-50: var(--cream-50);
+  --color-cream-100: var(--cream-100);
+  --color-cream-200: var(--cream-200);
+  --color-cream-300: var(--cream-300);
+  --color-cream-400: var(--cream-400);
+
+  /* Semantic accent / gold tokens */
+  --color-gold: var(--antique-gold);
+  --color-gold-soft: var(--cream-200);
+  --color-selected-bg: var(--blush);
+
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);

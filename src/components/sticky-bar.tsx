@@ -45,12 +45,12 @@ export function StickyBar({ selectedIds }: StickyBarProps) {
           animate={{ y: 0 }}
           exit={{ y: "100%" }}
           transition={{ type: "spring", stiffness: 320, damping: 32 }}
-          className="fixed inset-x-0 bottom-0 z-50 max-h-[80vh] md:max-h-[50vh]  max-w-full md:max-w-7xl mx-auto bg-espresso rounded-tl-2xl md:rounded-2xl  overflow-hidden shadow-lg md:mb-4"
+          className="fixed inset-x-0 bottom-0 z-50 max-h-[80vh] md:max-h-[50vh] max-w-full md:max-w-7xl mx-auto rounded-tl-2xl md:rounded-2xl overflow-hidden shadow-[0_-10px_40px_-10px_rgba(13,51,49,0.4)] md:mb-4"
           role="region"
           aria-label="شريط إرسال الطلب"
         >
           <div
-            className="w-full border-t-2 border-gold bg-rose-gold text-white"
+            className="w-full border-t-2 border-[#d4a96a] bg-[#1a4d4b] text-[#fbebd3]"
             style={{
               paddingBottom: "max(0px, env(safe-area-inset-bottom))",
             }}
@@ -59,7 +59,7 @@ export function StickyBar({ selectedIds }: StickyBarProps) {
               {/* Right side (RTL): selection count */}
               <p className="text-sm sm:text-base font-bold leading-none">
                 اخترت{" "}
-                <span className="text-gold font-bold mx-1" aria-live="polite">
+                <span className="text-[#d4a96a] font-bold mx-1" aria-live="polite">
                   {selectedIds.length}
                 </span>{" "}
                 نكهة
@@ -69,7 +69,7 @@ export function StickyBar({ selectedIds }: StickyBarProps) {
               <button
                 type="button"
                 onClick={handleSend}
-                className="cursor-pointer animate-pkg-pulse inline-flex items-center justify-center gap-2 bg-gold hover:bg-gold/90 text-white font-bold rounded-full px-6 py-2.5 sm:py-3 text-sm sm:text-base transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-espresso"
+                className="cursor-pointer animate-pkg-pulse inline-flex items-center justify-center gap-2 bg-[#d4a96a] hover:bg-[#b8924e] text-[#1a4d4b] font-bold rounded-full px-6 py-2.5 sm:py-3 text-sm sm:text-base transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#fbebd3] focus-visible:ring-offset-2 focus-visible:ring-offset-[#1a4d4b]"
               >
                 {/* <span aria-hidden="true">🍫</span> */}
                 <span>أرسل طلبك عبر واتساب</span>

@@ -10,10 +10,10 @@ function Macaron({ className = "" }: { className?: string }) {
       className={className}
       aria-hidden="true"
     >
-      <ellipse cx="30" cy="22" rx="22" ry="10" fill="#F2D5C4" />
-      <ellipse cx="30" cy="38" rx="22" ry="10" fill="#E8D5B7" />
-      <rect x="8" y="26" width="44" height="9" fill="#C4956A" />
-      <ellipse cx="30" cy="22" rx="22" ry="3" fill="#FDFAF6" opacity="0.4" />
+      <ellipse cx="30" cy="22" rx="22" ry="10" fill="#fbebd3" />
+      <ellipse cx="30" cy="38" rx="22" ry="10" fill="#f5dbb4" />
+      <rect x="8" y="26" width="44" height="9" fill="#458482" />
+      <ellipse cx="30" cy="22" rx="22" ry="3" fill="#fff8f0" opacity="0.4" />
     </svg>
   )
 }
@@ -32,13 +32,13 @@ function ChocolateBar({ className = "" }: { className?: string }) {
         width="40"
         height="32"
         rx="3"
-        fill="#C4956A"
-        stroke="#B8963E"
+        fill="#458482"
+        stroke="#d4a96a"
         strokeWidth="1"
       />
-      <line x1="23" y1="14" x2="23" y2="46" stroke="#B8963E" strokeWidth="1" />
-      <line x1="37" y1="14" x2="37" y2="46" stroke="#B8963E" strokeWidth="1" />
-      <line x1="10" y1="30" x2="50" y2="30" stroke="#B8963E" strokeWidth="1" />
+      <line x1="23" y1="14" x2="23" y2="46" stroke="#d4a96a" strokeWidth="1" />
+      <line x1="37" y1="14" x2="37" y2="46" stroke="#d4a96a" strokeWidth="1" />
+      <line x1="10" y1="30" x2="50" y2="30" stroke="#d4a96a" strokeWidth="1" />
     </svg>
   )
 }
@@ -57,12 +57,12 @@ function StarAnise({ className = "" }: { className?: string }) {
             key={i}
             rx="4"
             ry="14"
-            fill="#B8963E"
+            fill="#d4a96a"
             opacity="0.75"
             transform={`rotate(${(i * 360) / 8}) translate(0 -10)`}
           />
         ))}
-        <circle r="5" fill="#2C1810" opacity="0.4" />
+        <circle r="5" fill="#1a4d4b" opacity="0.4" />
       </g>
     </svg>
   )

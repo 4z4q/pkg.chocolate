@@ -3,17 +3,17 @@
 import { motion } from "motion/react";
 
 const categories = [
-  { label: "الشوكولاتة البلجيكية", icon: "🍫" },
-  { label: "الحلويات العربية الفاخرة", icon: "🌙" },
-  { label: "الحلى والتشيزكيك", icon: "🍰" },
-  { label: "الموالح الراقية", icon: "🥐" },
-  { label: "التوت المغطى بالشوكولاتة", icon: "🍓" },
-  { label: "بكجات الهدايا", icon: "🎁" },
+  { label: "الشوكولاتة البلجيكية" },
+  { label: "الحلويات العربية الفاخرة" },
+  { label: "الحلى والتشيزكيك" },
+  { label: "الموالح الراقية" },
+  { label: "التوت المغطى بالشوكولاتة" },
+  { label: "بكجات الهدايا" },
 ];
 
 export function Categories() {
   return (
-    <section className="relative py-10 md:py-14">
+    <section className="relative bg-[#fbebd3] text-[#1a4d4b] py-12 md:py-20">
       <div className="mx-auto max-w-7xl px-6">
         <motion.div
           initial={{ opacity: 0, y: 12 }}
@@ -30,9 +30,12 @@ export function Categories() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 + i * 0.08 }}
               whileHover={{ y: -2 }}
-              className="shrink-0 inline-flex items-center gap-2 px-6 py-3 rounded-full border border-warm-beige bg-warm-white hover:bg-cream hover:border-rose-gold text-sm tracking-wide text-espresso transition-all duration-500 shadow-[0_2px_10px_-4px_rgba(196,149,106,0.15)]"
+              className="shrink-0 inline-flex items-center gap-2 px-6 py-3 rounded-full border border-[#b8d8d7] bg-[#fff8f0] hover:bg-[#e8f4f3] hover:border-[#458482] text-sm tracking-wide text-[#1a4d4b] transition-all duration-500 shadow-[0_2px_10px_-4px_rgba(69,132,130,0.18)]"
             >
-              <span className="text-base">{c.icon}</span>
+              <span
+                aria-hidden="true"
+                className="inline-block w-1.5 h-1.5 rounded-full bg-[#458482]"
+              />
               <span className="font-light">{c.label}</span>
             </motion.button>
           ))}
