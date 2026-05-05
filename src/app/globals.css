@@ -4,36 +4,54 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* PKG Chocolate brand palette */
-  --background: #fdfaf6; /* warm white */
-  --foreground: #2c1810; /* deep espresso brown */
-  --card: #ffffff;
-  --card-foreground: #2c1810;
-  --popover: #ffffff;
-  --popover-foreground: #2c1810;
-  --primary: #c4956a; /* dusty rose gold */
-  --primary-foreground: #fdfaf6;
-  --secondary: #f5efe6; /* soft cream */
-  --secondary-foreground: #2c1810;
-  --muted: #f5efe6;
-  --muted-foreground: #6b4f3a;
-  --accent: #e8d5b7; /* warm beige */
-  --accent-foreground: #2c1810;
+  /* PKG Chocolate brand palette — Deep Aqua + Peach Cream */
+  --background: #fbebd3; /* peach cream — page background */
+  --foreground: #1a4d4b; /* deep aqua — body text */
+  --card: #fff8f0; /* cream 50 — card background */
+  --card-foreground: #1a4d4b;
+  --popover: #fff8f0;
+  --popover-foreground: #1a4d4b;
+  --primary: #458482; /* deep aqua — primary brand */
+  --primary-foreground: #ffffff;
+  --secondary: #e8f4f3; /* aqua 100 — soft teal surface */
+  --secondary-foreground: #1a4d4b;
+  --muted: #f5dbb4; /* cream 200 */
+  --muted-foreground: #3a7472; /* aqua 600 — muted text */
+  --accent: #d4a96a; /* golden tan — CTA accent */
+  --accent-foreground: #1a4d4b;
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.985 0 0);
-  --border: #ece2d2;
-  --input: #ece2d2;
-  --ring: #c4956a;
+  --border: #f5dbb4; /* cream 200 — card border */
+  --input: #f5dbb4;
+  --ring: #458482;
 
-  /* PKG brand tokens */
-  --cream: #f5efe6;
-  --warm-white: #fdfaf6;
-  --rose-gold: #c4956a;
-  --warm-beige: #e8d5b7;
-  --espresso: #2c1810;
-  --blush: #f2d5c4;
-  --sage: #d4cfc6;
-  --antique-gold: #b8963e;
+  /* PKG brand tokens — remapped to new palette */
+  --cream: #fff8f0; /* cream 50 — card surfaces */
+  --warm-white: #fbebd3; /* peach cream — page background */
+  --rose-gold: #458482; /* deep aqua — primary brand color */
+  --warm-beige: #f5dbb4; /* cream 200 — soft borders */
+  --espresso: #1a4d4b; /* aqua 800 — body / heading text */
+  --blush: #e8f4f3; /* aqua 100 — light section surface */
+  --sage: #b8d8d7; /* aqua 200 — muted teal */
+  --antique-gold: #d4a96a; /* golden tan — gold accent */
+
+  /* Extended aqua scale (optional usage) */
+  --aqua-100: #e8f4f3;
+  --aqua-200: #b8d8d7;
+  --aqua-300: #7ab0ae;
+  --aqua-400: #6aa8a6;
+  --aqua-500: #458482;
+  --aqua-600: #3a7472;
+  --aqua-700: #2d6e6c;
+  --aqua-800: #1a4d4b;
+  --aqua-900: #0d3331;
+
+  /* Extended cream scale */
+  --cream-50: #fff8f0;
+  --cream-100: #fbebd3;
+  --cream-200: #f5dbb4;
+  --cream-300: #edc88e;
+  --cream-400: #d4a96a;
 
   --radius: 0.75rem;
 }
@@ -148,7 +166,7 @@ html {
   background: var(--warm-white);
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--warm-beige);
+  background: var(--sage);
   border-radius: 999px;
 }
 ::-webkit-scrollbar-thumb:hover {
